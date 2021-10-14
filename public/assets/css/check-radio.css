@@ -1,0 +1,108 @@
+/* Checkbox */
+.toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; margin: 2px;}
+.toggle.ios .toggle-handle { border-radius: 20rem;}
+
+.toggle-on.btn, .toggle-off.btn{
+    padding: 3px !important;
+    text-align: center;
+}
+.toggle-off.btn{
+    background-color: #D62A1ECC !important;
+}
+.toggle-on.btn{
+    background-color: #22CA4E99 !important;
+}
+.icheckbox_square-blue{
+    background: none !important;
+}
+.btn-primary:hover{
+    border-color: #22CA4E99 !important;
+}
+.btn-primary{
+    border-color: green !important;
+}
+.btn-light{
+    border-color: #ea4b4b !important;
+}
+.toggle-handle{
+    border-color: white !important;
+}
+.boton{
+    border-color: #428bca !important;
+}
+
+/* cards de permisos */
+.cols{
+    padding-right: 0 !important;
+    padding-left: 0!important;
+}
+
+div .titlea{
+    background-color: #97CF85 !important;
+}
+
+.card-header {
+    background-color: #CDE9C1 !important;
+    border-bottom: 1px solid #DCDCDC !important;
+    height: 55px !important;
+    font-family: initial !important;
+}
+
+.card-header h4{
+    font-size: 1.625rem;
+}
+
+@media ((max-width: 1166px) and (min-width: 993px)){
+    .enter{
+        font-size: 0 ;
+        display: block ;
+    }
+    .enternos{
+        margin-top: -7px !important;
+    }
+    .title{
+        margin-top: -7px ;
+    } 
+    .col-sm-12, .col-lg-6{
+        padding-right: 7px;
+        padding-left: 7px;
+    }
+    .enterN{
+        font-size: 0 ;
+        display: block ;
+    }
+    .top {
+        margin-top: -7px !important;
+    }
+}
+@media(max-width: 465px){
+    .enter, .enter1{
+        font-size: 0 ;
+        display: block ;
+    }
+    .enternos{
+        margin-top: -7px !important;
+    }
+    .title, .pos{
+        margin-top: -7px ;
+    } 
+    .col-sm-12{
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/* Radio button */
+.special{
+    border: 1px solid black !important;
+    color: black;
+    background: #c8c8c8cc !important;
+}
+.active{
+    background: #636361b3 !important;
+}
+.iradio_square-blue{
+    border-radius: 100%;
+    border: 1px solid black !important;
+}
+
