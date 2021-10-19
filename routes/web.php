@@ -1,5 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\URL;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +17,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
 
 Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('config:clear');

@@ -10,30 +10,30 @@
 
   <!-- Favicons
     ================================================== -->
-  <link rel="shortcut icon" href="{{asset('assets/img/login/logoArbolERTreeServices.png')}}" />
-  <link rel="apple-touch-icon" href="{{asset('page/img/apple-touch-icon.png')}}">
-  <link rel="apple-touch-icon" sizes="72x72" href="{{asset('page/img/apple-touch-icon-72x72.png')}}">
-  <link rel="apple-touch-icon" sizes="114x114" href="{{asset('page/img/apple-touch-icon-114x114.png')}}">
+  <link rel="shortcut icon" href="<?php echo e(asset('assets/img/login/logoArbolERTreeServices.png')); ?>" />
+  <link rel="apple-touch-icon" href="<?php echo e(asset('page/img/apple-touch-icon.png')); ?>">
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo e(asset('page/img/apple-touch-icon-72x72.png')); ?>">
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo e(asset('page/img/apple-touch-icon-114x114.png')); ?>">
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" type="text/css" href="{{asset('page/css/bootstrap.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('assets/vendors/fontawesome/css/all.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('page/css/bootstrap.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/vendors/fontawesome/css/all.min.css')); ?>">
 
   <!-- Slider
     ================================================== -->
-  <link href="{{asset('page/css/owl.carousel.css')}}" rel="stylesheet" media="screen">
-  <link href="{{asset('page/css/owl.theme.css')}}" rel="stylesheet" media="screen">
+  <link href="<?php echo e(asset('page/css/owl.carousel.css')); ?>" rel="stylesheet" media="screen">
+  <link href="<?php echo e(asset('page/css/owl.theme.css')); ?>" rel="stylesheet" media="screen">
 
   <!-- Stylesheet
     ================================================== -->
-  <link rel="stylesheet" type="text/css" href="{{asset('page/css/style.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('page/css/nivo-lightbox/nivo-lightbox.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('page/css/nivo-lightbox/default.css')}}">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('page/css/style.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('page/css/nivo-lightbox/nivo-lightbox.css')); ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo e(asset('page/css/nivo-lightbox/default.css')); ?>">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
   <!-- Bar social network -->
-  <link rel="stylesheet" href="{{asset('page/css/all.min.css')}}">
-  <link rel="stylesheet" href="{{asset('page/css/estilos.css')}}">
+  <link rel="stylesheet" href="<?php echo e(asset('page/css/all.min.css')); ?>">
+  <link rel="stylesheet" href="<?php echo e(asset('page/css/estilos.css')); ?>">
 
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -82,13 +82,13 @@
           <li><a href="#testimonials" class="page-scroll">Testimonials</a></li>
           <li><a href="#contact" class="page-scroll">Contact</a></li>
 
-          @auth
-          <li><a href="{{url('login')}}" class="page-scroll"><i class="fas fa-home-lg"></i> Dashboard</a></li>
-          @endauth
+          <?php if(auth()->guard()->check()): ?>
+          <li><a href="<?php echo e(url('login')); ?>" class="page-scroll"><i class="fas fa-home-lg"></i> Dashboard</a></li>
+          <?php endif; ?>
 
-          @guest
-          <li><a href="{{url('login')}}" class="page-scroll">Login</a></li>
-          @endguest
+          <?php if(auth()->guard()->guest()): ?>
+          <li><a href="<?php echo e(url('login')); ?>" class="page-scroll">Login</a></li>
+          <?php endif; ?>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -127,14 +127,14 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class="about-media"> <img src="{{asset('page/img/about-1.jpg')}}" alt=" "> </div>
+          <div class="about-media"> <img src="<?php echo e(asset('page/img/about-1.jpg')); ?>" alt=" "> </div>
           <div class="about-desc">
             <h3>Cutting Trees</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis.</p>
           </div>
         </div>
         <div class="col-xs-12 col-md-3">
-          <div class="about-media"> <img src="{{asset('page/img/about-2.jpg')}}" alt=" "> </div>
+          <div class="about-media"> <img src="<?php echo e(asset('page/img/about-2.jpg')); ?>" alt=" "> </div>
           <div class="about-desc">
             <h3>Arranging Gardens</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante.</p>
@@ -153,28 +153,28 @@
       </div>
       <div class="row">
         <div class="col-md-3 text-center">
-          <div class="service-media"> <img src="{{asset('page/img/services/service-1.jpg')}}" alt=" "> </div>
+          <div class="service-media"> <img src="<?php echo e(asset('page/img/services/service-1.jpg')); ?>" alt=" "> </div>
           <div class="service-desc">
             <h3>Tree removal</h3>
             <p>We use ropes and pulleys to carefully lower large limbs near houses to the ground slowly, with ground crew to support our climbers.</p>
           </div>
         </div>
         <div class="col-md-3 text-center">
-          <div class="service-media"> <img src="{{asset('page/img/services/service-2.jpg')}}" alt=" "> </div>
+          <div class="service-media"> <img src="<?php echo e(asset('page/img/services/service-2.jpg')); ?>" alt=" "> </div>
           <div class="service-desc">
             <h3>Stump Grinding</h3>
             <p>We are equipped with powerful tools to safely remove tree stumps.</p>
           </div>
         </div>
         <div class="col-md-3 text-center">
-          <div class="service-media"> <img src="{{asset('page/img/services/service-3.jpg')}}" alt=" "> </div>
+          <div class="service-media"> <img src="<?php echo e(asset('page/img/services/service-3.jpg')); ?>" alt=" "> </div>
           <div class="service-desc">
             <h3>Landscape maintenance</h3>
             <p>change the landscape of your home and select one of your liking.</p>
           </div>
         </div>
         <div class="col-md-3 text-center">
-          <div class="service-media"> <img src="{{asset('page/img/services/service-4.jpg')}}" alt=" "> </div>
+          <div class="service-media"> <img src="<?php echo e(asset('page/img/services/service-4.jpg')); ?>" alt=" "> </div>
           <div class="service-desc">
             <h3>All phases of tree pruning</h3>
             <p>We carry out a complete process of removal of trees which have completed their life cycle.</p>
@@ -210,91 +210,91 @@
         <div class="portfolio-items">
           <div class="col-sm-6 col-md-4 lawn">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/02.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/02.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Lorem Ipsum</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/02.jpg')}}" class="img-responsive" alt="Project Title" data-lightbox-gallery="gallery1">
+                  <img src="<?php echo e(asset('page/img/portfolio/02.jpg')); ?>" class="img-responsive" alt="Project Title" data-lightbox-gallery="gallery1">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 planting">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/03.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/03.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Adipiscing Elit</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/03.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/03.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 lawn">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/05.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/05.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Lorem Ipsum</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/05.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/05.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 lawn">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/07.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/07.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Lorem Ipsum</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/07.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/07.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 planting">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/09.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/09.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Adipiscing Elit</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/09.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/09.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 garden">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/11.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/11.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Dolor Sit</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/11.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/11.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 garden">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/13.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/13.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Dolor Sit</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/13.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/13.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 lawn">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/15.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/15.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Lorem Ipsum</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/15.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/15.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 planting">
             <div class="portfolio-item">
-              <div class="hover-bg"> <a href="{{asset('page/img/portfolio/17.jpg')}}" title="Project Title" data-lightbox-gallery="gallery1">
+              <div class="hover-bg"> <a href="<?php echo e(asset('page/img/portfolio/17.jpg')); ?>" title="Project Title" data-lightbox-gallery="gallery1">
                   <div class="hover-text">
                     <h4>Adipiscing Elit</h4>
                   </div>
-                  <img src="{{asset('page/img/portfolio/17.jpg')}}" class="img-responsive" alt="Project Title">
+                  <img src="<?php echo e(asset('page/img/portfolio/17.jpg')); ?>" class="img-responsive" alt="Project Title">
                 </a> </div>
             </div>
           </div>
@@ -444,16 +444,16 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="{{asset('page/js/jquery.1.11.1.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/bootstrap.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/SmoothScroll.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/nivo-lightbox.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/jquery.isotope.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/owl.carousel.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/jqBootstrapValidation.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/contact_me.js')}}"></script>
-  <script type="text/javascript" src="{{asset('page/js/main.js')}}"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/jquery.1.11.1.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/bootstrap.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/SmoothScroll.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/nivo-lightbox.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/jquery.isotope.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/owl.carousel.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/jqBootstrapValidation.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/contact_me.js')); ?>"></script>
+  <script type="text/javascript" src="<?php echo e(asset('page/js/main.js')); ?>"></script>
 
 </body>
 
-</html>
+</html><?php /**PATH D:\ErTreeServices\Fercho\Tree-Evolution-Service\resources\views/page/index.blade.php ENDPATH**/ ?>

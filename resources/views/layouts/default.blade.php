@@ -101,11 +101,6 @@
     <!-- header logo: style can be found in header-->
     <header class="header">
         <nav class="navbar navbar-expand-md navbar-static-top">
-            <a href="index " class="logo navbar-brand">
-                <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                <img src="{{asset('assets/img/logo.png')}}" alt="logo" style="width: 110px; margin-top:-10px" />
-            </a>
-
             <!-- Sidebar toggle button-->
             <div>
                 <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button"> <i class="fa fa-fw fa-bars"></i> </a>
